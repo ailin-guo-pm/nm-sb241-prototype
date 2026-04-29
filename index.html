@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prototype</title>
+
+    <script type="module" crossorigin src="./assets/index-DlFuBqe0.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BXVqpOSn.css">
+  </head>
+  <body><div id="pw-gate" style="position:fixed;inset:0;z-index:99999;background:#0d1117;display:flex;align-items:center;justify-content:center">
+  <div style="background:#161b22;border:1px solid #30363d;border-radius:8px;padding:32px;width:340px;text-align:center;font-family:system-ui,sans-serif">
+    <h2 style="color:#e6edf3;font-size:18px;margin:0 0 16px">NM SB241 Annual Report</h2>
+    <input id="pw-in" type="password" placeholder="Password" autofocus style="width:100%;padding:10px 12px;background:#0d1117;border:1px solid #30363d;border-radius:6px;color:#c9d1d9;font-size:14px;margin-bottom:12px;box-sizing:border-box">
+    <button onclick="pwCheck()" style="width:100%;padding:10px;background:#238636;border:none;border-radius:6px;color:#fff;font-size:14px;cursor:pointer;font-weight:600">Unlock</button>
+    <div id="pw-err" style="color:#f85149;font-size:13px;margin-top:8px;display:none">Incorrect password</div>
+  </div>
+</div>
+<script>
+function pwCheck(){if(btoa(document.getElementById('pw-in').value)==='c2IyNDE='){document.getElementById('pw-gate').remove();}else{document.getElementById('pw-err').style.display='block';}}
+document.addEventListener('keydown',e=>{if(e.key==='Enter')pwCheck();});
+</script>
+    <div id="root"></div>
+  </body>
+</html>
